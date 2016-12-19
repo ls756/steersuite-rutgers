@@ -18,11 +18,10 @@
 
 
 // globally accessible to the simpleAI plugin
-// extern SteerLib::EngineInterface * gEngine;
-// extern SteerLib::SpatialDataBaseInterface * gSpatialDatabase;
+ extern SteerLib::EngineInterface * gEngine;
+ extern SteerLib::SpatialDataBaseInterface * gSpatialDatabase;
 
-
-
+ 
 /**
  * @brief An example plugin for the SimulationEngine that provides very basic AI agents.
  *
@@ -38,6 +37,7 @@
  *    this agent serves as an example of how to create your own steering AI using SteerLib features.
  *
  */
+
 
 
 

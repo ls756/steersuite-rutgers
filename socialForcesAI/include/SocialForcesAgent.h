@@ -14,9 +14,9 @@
 #include <list>
 #include "SteerLib.h"
 // #include "SimpleAgent.h"
-// #include "SocialForcesAIModule.h"
+#include "SocialForcesAIModule.h"
 #include "SocialForces_Parameters.h"
-
+#include "planning/AStarPlanner.h"
 
 /**
  * @brief Social Forces Agent stuff
@@ -63,11 +63,19 @@ public:
 	// void insertAgentNeighbor(const SteerLib::AgentInterface * agent, float &rangeSq) {throw Util::GenericException("clearGoals() not implemented yet for SocialForcesAgent");}
 	// bool compareDist(SteerLib::AgentInterface * a1, SteerLib::AgentInterface * a2 );
 
+	/*
+	computePlan calls the A* function to compute the path and store in in the global __path variable.
+	*/
+	void computePlan();
+	SteerLib::AStarPlanner astar;
+
 protected:
 	/// Updates position, velocity, and orientation of the agent, given the force and dt time step.
 	// void _doEulerStep(const Util::Vector & steeringDecisionForce, float dt);
-
+	Util::Point __position;
+	std::vector<Util::Point> __path;
 	SocialForcesParameters _SocialForcesParams;
+	int last_waypoint = 0;
 
 	virtual SteerLib::EngineInterface * getSimulationEngine();
 

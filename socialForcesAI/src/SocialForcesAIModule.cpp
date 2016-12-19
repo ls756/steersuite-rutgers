@@ -7,7 +7,7 @@
 /// @file SocialForcesAIModule.cpp
 /// @brief Implements the SocialForcesAIModule plugin.
 
-
+#include "SteerLib.h"
 #include "SimulationPlugin.h"
 #include "SocialForcesAIModule.h"
 #include "SocialForcesAgent.h"
@@ -16,15 +16,16 @@
 #include "LogManager.h"
 
 
+
 // globally accessible to the simpleAI plugin
-// SteerLib::EngineInterface * gEngine;
-// SteerLib::SpatialDataBaseInterface * gSpatialDatabase;
+SteerLib::EngineInterface * gEngine;
+SteerLib::SpatialDataBaseInterface * gSpatialDatabase;
 
 namespace SocialForcesGlobals
 {
 
-	// SteerLib::EngineInterface * gEngineInfo;
-	// SteerLib::SpatialDataBaseInterface * gSpatialDatabase;
+	//SteerLib::EngineInterface * gEngineInfo;
+	//SteerLib::SpatialDataBaseInterface * gSpatialDatabase;
 	unsigned int gLongTermPlanningPhaseInterval;
 	unsigned int gMidTermPlanningPhaseInterval;
 	unsigned int gShortTermPlanningPhaseInterval;
@@ -70,9 +71,9 @@ PLUGIN_API void destroyModule( SteerLib::ModuleInterface*  module )
 
 void SocialForcesAIModule::init( const SteerLib::OptionDictionary & options, SteerLib::EngineInterface * engineInfo )
 {
-	// gEngine = engineInfo;
-	// gSpatialDatabase = engineInfo->getSpatialDatabase();
-	_gEngine = engineInfo;		
+	std::cout << "Cheese5" << std::endl;
+	gEngine = engineInfo;
+	
 	_data = "";
 
 	gUseDynamicPhaseScheduling = false;
@@ -81,6 +82,8 @@ void SocialForcesAIModule::init( const SteerLib::OptionDictionary & options, Ste
 	gShowAllStats = false;
 	logFilename = "sfAI.log";
 	dont_plan = false;
+
+	std::cout << "line 1" << std::endl;
 
 	sf_acceleration = ACCELERATION;
 	sf_personal_space_threshold = PERSONAL_SPACE_THRESHOLD;
@@ -95,11 +98,13 @@ void SocialForcesAIModule::init( const SteerLib::OptionDictionary & options, Ste
 	sf_wall_a = WALL_A;
 	sf_max_speed = MAX_SPEED;
 
+	std::cout << "line 2" << std::endl;
 
 	SteerLib::OptionDictionary::const_iterator optionIter;
+
 	for (optionIter = options.begin(); optionIter != options.end(); ++optionIter) {
 		std::stringstream value((*optionIter).second);
-		// std::cout << "option " << (*optionIter).first << " value " << value.str() << std::endl;
+		std::cout << "option " << (*optionIter).first << " value " << value.str() << std::endl;
 		if ((*optionIter).first == "")
 		{
 			value >> gLongTermPlanningPhaseInterval;
@@ -180,8 +185,12 @@ void SocialForcesAIModule::init( const SteerLib::OptionDictionary & options, Ste
 			// throw Util::GenericException("unrecognized option \"" + Util::toString((*optionIter).first) + "\" given to PPR AI module.");
 		}
 	}
+	std::cout << "line 3" << std::endl;
 
+	/*
 		_rvoLogger = LogManager::getInstance()->createLogger(logFilename,LoggerType::BASIC_WRITE);
+
+		std::cout << "problem here" << std::endl;
 
 		_rvoLogger->addDataField("number_of_times_executed",DataType::LongLong );
 		_rvoLogger->addDataField("total_ticks_accumulated",DataType::LongLong );
@@ -192,9 +201,10 @@ void SocialForcesAIModule::init( const SteerLib::OptionDictionary & options, Ste
 		_rvoLogger->addDataField("average_time_per_call", DataType::Float);
 		_rvoLogger->addDataField("total_time_of_all_calls", DataType::Float);
 		_rvoLogger->addDataField("tick_frequency", DataType::Float);
-
+		std::cout << "line 4" << std::endl;
 	if( logStats )
 		{
+			std::cout << "line 5" << std::endl;
 		// LETS TRY TO WRITE THE LABELS OF EACH FIELD
 		std::stringstream labelStream;
 		unsigned int i;
@@ -206,10 +216,14 @@ void SocialForcesAIModule::init( const SteerLib::OptionDictionary & options, Ste
 		_rvoLogger->writeData(labelStream.str());
 
 	}
+	*/
+
+	std::cout << "Cheese4" << std::endl;
 }
 
 void SocialForcesAIModule::initializeSimulation()
 {
+	std::cout << "Cheese2" << std::endl;
 	//
 	// initialize the performance profilers
 	//
@@ -222,7 +236,7 @@ void SocialForcesAIModule::initializeSimulation()
 	gPhaseProfilers->predictivePhaseProfiler.reset();
 	gPhaseProfilers->reactivePhaseProfiler.reset();
 	gPhaseProfilers->steeringPhaseProfiler.reset();
-
+	std::cout << "Cheese3" << std::endl;
 }
 
 void SocialForcesAIModule::finish()
@@ -323,6 +337,7 @@ void SocialForcesAIModule::cleanupSimulation()
 {
 	agents_.clear();
 
+	/*
 		LogObject rvoLogObject;
 
 		rvoLogObject.addLogData(gPhaseProfilers->aiProfiler.getNumTimesExecuted());
@@ -352,5 +367,6 @@ void SocialForcesAIModule::cleanupSimulation()
 	{
 		_rvoLogger->writeLogObject(rvoLogObject);
 	}
+	*/
 
 }

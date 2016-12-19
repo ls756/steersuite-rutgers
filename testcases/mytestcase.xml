@@ -1,0 +1,556 @@
+﻿<!--
+  Copyright (c) 2009-2015  Glen Berseth, Mubbasir Kapadia, Shawn Singh, Petros Faloutsos, Glenn Reinman
+  See license.txt for complete license.
+-->
+<!--
+  Copyright (c) 2009 Shawn Singh, Mubbasir Kapadia, Petros Faloutsos, Glenn Reinman
+  See license.txt for complete license.
+-->
+
+<SteerBenchTestCase xmlns="http://www.magix.ucla.edu/steerbench"
+                    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                    xsi:schemaLocation="http://www.magix.ucla.edu/steerbench 
+                                        TestCaseSchema.xsd">
+
+  <header>
+    <version>1.0</version>
+    <name>simple-1</name>
+    <worldBounds>
+      <xmin>-100</xmin>
+      <xmax>100</xmax>
+      <ymin>0</ymin>
+      <ymax>0</ymax>
+      <zmin>-100</zmin>
+      <zmax>100</zmax>
+    </worldBounds>
+  </header>
+
+  <suggestedCameraView>
+    <position>
+      <x>0</x>
+      <y>35</y>
+      <z>-10</z>
+    </position>
+    <lookat>
+      <x>0</x>
+      <y>0</y>
+      <z>0</z>
+    </lookat>
+    <up>
+      <x>0</x>
+      <y>1</y>
+      <z>0</z>
+    </up>
+    <fovy>45</fovy>
+  </suggestedCameraView>
+  
+<!--walls-->
+  <obstacle>
+    <xmin>-100</xmin>
+    <xmax>98</xmax>
+    <ymin>0</ymin>
+    <ymax>1</ymax>
+    <zmin>-100</zmin>
+    <zmax>-96</zmax>
+  </obstacle>
+  
+  <!--walls-->
+  <obstacle>
+    <xmin>-100</xmin>
+    <xmax>98</xmax>
+    <ymin>0</ymin>
+    <ymax>1</ymax>
+    <zmin>94</zmin>
+    <zmax>98</zmax>
+  </obstacle>
+
+  <!--walls-->
+  <obstacle>
+    <xmin>-100</xmin>
+    <xmax>-96</xmax>
+    <ymin>0</ymin>
+    <ymax>1</ymax>
+    <zmin>-100</zmin>
+    <zmax>96</zmax>
+  </obstacle>
+
+  <!--walls-->
+  <obstacle>
+    <xmin>92</xmin>
+    <xmax>98</xmax>
+    <ymin>0</ymin>
+    <ymax>1</ymax>
+    <zmin>-100</zmin>
+    <zmax>98</zmax>
+  </obstacle>
+
+  <obstacle>
+    <xmin>-100</xmin>
+    <xmax>-80</xmax>
+    <ymin>0</ymin>
+    <ymax>1</ymax>
+    <zmin>74</zmin>
+    <zmax>80</zmax>
+  </obstacle>
+
+  <obstacle>
+    <xmin>-100</xmin>
+    <xmax>-80</xmax>
+    <ymin>0</ymin>
+    <ymax>1</ymax>
+    <zmin>8</zmin>
+    <zmax>14</zmax>
+  </obstacle>
+
+  <obstacle>
+    <xmin>-100</xmin>
+    <xmax>-10</xmax>
+    <ymin>0</ymin>
+    <ymax>1</ymax>
+    <zmin>-10</zmin>
+    <zmax>-5</zmax>
+  </obstacle>
+
+  <obstacle>
+    <xmin>-86</xmin>
+    <xmax>-80</xmax>
+    <ymin>0</ymin>
+    <ymax>1</ymax>
+    <zmin>50</zmin>
+    <zmax>68</zmax>
+  </obstacle>
+
+  <obstacle>
+    <xmin>-80</xmin>
+    <xmax>-50</xmax>
+    <ymin>0</ymin>
+    <ymax>1</ymax>
+    <zmin>50</zmin>
+    <zmax>56</zmax>
+  </obstacle>
+
+  <obstacle>
+    <xmin>-80</xmin>
+    <xmax>-50</xmax>
+    <ymin>0</ymin>
+    <ymax>1</ymax>
+    <zmin>30</zmin>
+    <zmax>36</zmax>
+  </obstacle>
+
+  <obstacle>
+    <xmin>-86</xmin>
+    <xmax>-80</xmax>
+    <ymin>0</ymin>
+    <ymax>1</ymax>
+    <zmin>8</zmin>
+    <zmax>36</zmax>
+  </obstacle>
+
+  <obstacle>
+    <xmin>-65</xmin>
+    <xmax>-61</xmax>
+    <ymin>0</ymin>
+    <ymax>1</ymax>
+    <zmin>60</zmin>
+    <zmax>100</zmax>
+  </obstacle>
+
+  <obstacle>
+    <xmin>-54</xmin>
+    <xmax>-50</xmax>
+    <ymin>0</ymin>
+    <ymax>1</ymax>
+    <zmin>50</zmin>
+    <zmax>100</zmax>
+  </obstacle>
+
+  <obstacle>
+    <xmin>-54</xmin>
+    <xmax>-50</xmax>
+    <ymin>0</ymin>
+    <ymax>1</ymax>
+    <zmin>8</zmin>
+    <zmax>30</zmax>
+  </obstacle>
+
+  <obstacle>
+    <xmin>-50</xmin>
+    <xmax>-10</xmax>
+    <ymin>0</ymin>
+    <ymax>1</ymax>
+    <zmin>8</zmin>
+    <zmax>14</zmax>
+  </obstacle>
+
+  <obstacle>
+    <xmin>-14</xmin>
+    <xmax>-10</xmax>
+    <ymin>0</ymin>
+    <ymax>1</ymax>
+    <zmin>14</zmin>
+    <zmax>32</zmax>
+  </obstacle>
+
+  <obstacle>
+    <xmin>-40</xmin>
+    <xmax>-28</xmax>
+    <ymin>0</ymin>
+    <ymax>1</ymax>
+    <zmin>86</zmin>
+    <zmax>90</zmax>
+  </obstacle>
+
+  <obstacle>
+    <xmin>-14</xmin>
+    <xmax>-10</xmax>
+    <ymin>0</ymin>
+    <ymax>1</ymax>
+    <zmin>50</zmin>
+    <zmax>90</zmax>
+  </obstacle>
+
+  <obstacle>
+    <xmin>-40</xmin>
+    <xmax>-36</xmax>
+    <ymin>0</ymin>
+    <ymax>1</ymax>
+    <zmin>32</zmin>
+    <zmax>90</zmax>
+  </obstacle>
+
+  <obstacle>
+    <xmin>-32</xmin>
+    <xmax>-28</xmax>
+    <ymin>0</ymin>
+    <ymax>1</ymax>
+    <zmin>50</zmin>
+    <zmax>90</zmax>
+  </obstacle>
+
+  <obstacle>
+    <xmin>-32</xmin>
+    <xmax>-10</xmax>
+    <ymin>0</ymin>
+    <ymax>1</ymax>
+    <zmin>50</zmin>
+    <zmax>56</zmax>
+  </obstacle>
+
+  <obstacle>
+    <xmin>-40</xmin>
+    <xmax>-10</xmax>
+    <ymin>0</ymin>
+    <ymax>1</ymax>
+    <zmin>30</zmin>
+    <zmax>34</zmax>
+  </obstacle>
+
+  <obstacle>
+    <xmin>-14</xmin>
+    <xmax>-10</xmax>
+    <ymin>0</ymin>
+    <ymax>1</ymax>
+    <zmin>-100</zmin>
+    <zmax>-5</zmax>
+  </obstacle>
+
+  <obstacle>
+    <xmin>10</xmin>
+    <xmax>14</xmax>
+    <ymin>0</ymin>
+    <ymax>1</ymax>
+    <zmin>8</zmin>
+    <zmax>100</zmax>
+  </obstacle>
+
+  <obstacle>
+    <xmin>10</xmin>
+    <xmax>100</xmax>
+    <ymin>0</ymin>
+    <ymax>1</ymax>
+    <zmin>8</zmin>
+    <zmax>14</zmax>
+  </obstacle>
+
+  <obstacle>
+    <xmin>-14</xmin>
+    <xmax>85</xmax>
+    <ymin>0</ymin>
+    <ymax>1</ymax>
+    <zmin>-90</zmin>
+    <zmax>-86</zmax>
+  </obstacle>
+
+  <obstacle>
+    <xmin>-14</xmin>
+    <xmax>85</xmax>
+    <ymin>0</ymin>
+    <ymax>1</ymax>
+    <zmin>-76</zmin>
+    <zmax>-70</zmax>
+  </obstacle>
+
+  <obstacle>
+    <xmin>81</xmin>
+    <xmax>85</xmax>
+    <ymin>0</ymin>
+    <ymax>1</ymax>
+    <zmin>-90</zmin>
+    <zmax>-70</zmax>
+  </obstacle>
+
+  <obstacle>
+    <xmin>10</xmin>
+    <xmax>100</xmax>
+    <ymin>0</ymin>
+    <ymax>1</ymax>
+    <zmin>-55</zmin>
+    <zmax>-51</zmax>
+  </obstacle>
+
+  <obstacle>
+    <xmin>10</xmin>
+    <xmax>100</xmax>
+    <ymin>0</ymin>
+    <ymax>1</ymax>
+    <zmin>-41</zmin>
+    <zmax>-37</zmax>
+  </obstacle>
+
+  <obstacle>
+    <xmin>10</xmin>
+    <xmax>14</xmax>
+    <ymin>0</ymin>
+    <ymax>1</ymax>
+    <zmin>-55</zmin>
+    <zmax>-37</zmax>
+  </obstacle>
+
+  <obstacle>
+    <xmin>-14</xmin>
+    <xmax>85</xmax>
+    <ymin>0</ymin>
+    <ymax>1</ymax>
+    <zmin>-27</zmin>
+    <zmax>-23</zmax>
+  </obstacle>
+
+  <obstacle>
+    <xmin>10</xmin>
+    <xmax>85</xmax>
+    <ymin>0</ymin>
+    <ymax>1</ymax>
+    <zmin>-10</zmin>
+    <zmax>-5</zmax>
+  </obstacle>
+
+  <obstacle>
+    <xmin>81</xmin>
+    <xmax>85</xmax>
+    <ymin>0</ymin>
+    <ymax>1</ymax>
+    <zmin>-27</zmin>
+    <zmax>-5</zmax>
+  </obstacle>
+
+  <obstacle>
+    <xmin>10</xmin>
+    <xmax>14</xmax>
+    <ymin>0</ymin>
+    <ymax>1</ymax>
+    <zmin>-15</zmin>
+    <zmax>-5</zmax>
+  </obstacle>
+
+  <agent>
+    <name>A</name>
+    <initialConditions>
+      <radius>1</radius>
+      <position>
+        <x>-90</x>
+        <y>0</y>
+        <z>90</z>
+      </position>
+      <direction>
+        <x>1</x>
+        <y>0</y>
+        <z>0</z>
+      </direction>
+      <speed>0</speed>
+    </initialConditions>
+    <goalSequence>
+      <seekStaticTarget>
+        <targetLocation>
+          <x>30</x>
+          <y>0</y>
+          <z>-15</z>
+        </targetLocation>
+        <desiredSpeed>10.3</desiredSpeed>
+        <timeDuration>1000.0</timeDuration>
+      </seekStaticTarget>
+
+
+    </goalSequence>
+
+  </agent>
+
+  
+  <agent>
+    <name>B</name>
+    <initialConditions>
+      <radius>1</radius>
+      <position>
+        <x>5</x>
+        <y>0</y>
+        <z>-95</z>
+      </position>
+      <direction>
+        <x>1</x>
+        <y>0</y>
+        <z>0</z>
+      </direction>
+      <speed>0</speed>
+    </initialConditions>
+    <goalSequence>
+      <seekStaticTarget>
+        <targetLocation>
+          <x>-63</x> 
+          <y>0</y>
+          <z>15</z>  
+        </targetLocation>
+        <desiredSpeed>10.3</desiredSpeed>
+        <timeDuration>1000.0</timeDuration>
+      </seekStaticTarget>
+
+
+    </goalSequence>
+
+  </agent>
+<!--
+  <agent>
+    <name>C</name>
+    <initialConditions>
+      <radius>0.5</radius>
+      <position>
+        <x>20</x>
+        <y>0</y>
+        <z>90</z>
+      </position>
+      <direction>
+        <x>1</x>
+        <y>0</y>
+        <z>0</z>
+      </direction>
+      <speed>0</speed>
+      <color>
+        <r>0.3</r>
+        <g>0.5</g>
+        <b>1</b>
+      </color>
+    </initialConditions>
+    <goalSequence>
+      <seekStaticTarget>
+        <targetLocation>
+          <x>80</x>
+          <y>0</y>
+          <z>75</z>
+        </targetLocation>
+        <targetTangent>
+          <x>1</x>
+          <y>0</y>
+          <z>0</z>
+        </targetTangent>
+        <targetTime>30</targetTime>
+        <desiredSpeed>1.3</desiredSpeed>
+        <timeDuration>10000</timeDuration>
+      </seekStaticTarget>
+      <seekStaticTarget>
+        <targetLocation>
+          <x>20</x>
+          <y>0</y>
+          <z>40</z>
+        </targetLocation>
+        <targetTangent>
+          <x>1</x>
+          <y>0</y>
+          <z>0</z>
+        </targetTangent>
+        <targetTime>100</targetTime>
+        <desiredSpeed>1.3</desiredSpeed>
+        <timeDuration>10000</timeDuration>
+      </seekStaticTarget>
+      <seekStaticTarget>
+        <targetLocation>
+          <x>80</x>
+          <y>0</y>
+          <z>30</z>
+        </targetLocation>
+        <targetTangent>
+          <x>2</x>
+          <y>-1</y>
+          <z>1</z>
+        </targetTangent>
+        <targetTime>150</targetTime>
+        <desiredSpeed>1.3</desiredSpeed>
+        <timeDuration>10000</timeDuration>
+      </seekStaticTarget>
+    </goalSequence>
+  </agent>
+
+  <agent>
+    <name>D</name>
+    <initialConditions>
+      <radius>0.5</radius>
+      <position>
+        <x>-70</x>
+        <y>0</y>
+        <z>-85</z>
+      </position>
+      <direction>
+        <x>0</x>
+        <y>0</y>
+        <z>1</z>
+      </direction>
+      <speed>0</speed>
+      <color>
+        <r>0.3</r>
+        <g>0.5</g>
+        <b>1</b>
+      </color>
+    </initialConditions>
+    <goalSequence>
+      <seekStaticTarget>
+        <targetLocation>
+          <x>-85</x>
+          <y>0</y>
+          <z>-50</z>
+        </targetLocation>
+        <targetTangent>
+          <x>1</x>
+          <y>0</y>
+          <z>0</z>
+        </targetTangent>
+        <targetTime>30</targetTime>
+        <desiredSpeed>1.3</desiredSpeed>
+        <timeDuration>10000</timeDuration>
+      </seekStaticTarget>
+      <seekStaticTarget>
+        <targetLocation>
+          <x>-30</x>
+          <y>0</y>
+          <z>-20</z>
+        </targetLocation>
+        <targetTangent>
+          <x>1</x>
+          <y>0</y>
+          <z>0</z>
+        </targetTangent>
+        <targetTime>100</targetTime>
+        <desiredSpeed>1.3</desiredSpeed>
+        <timeDuration>10000</timeDuration>
+      </seekStaticTarget>
+    </goalSequence>
+  </agent>
+-->
+</SteerBenchTestCase>

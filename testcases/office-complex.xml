@@ -1652,6 +1652,8 @@
     <zmin>24.5</zmin>
     <zmax>25</zmax>
   </obstacle>
+
+
   
   <agentRegion>
     <numAgents>400</numAgents>
@@ -1798,5 +1800,6 @@
     </goalSequence>
 
   </agentRegion>
+  
 
 </SteerBenchTestCase>
